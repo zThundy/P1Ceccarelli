@@ -29,13 +29,15 @@ void LinkedDeque<T>::insertBack(const T& e){
     n++;
 }
 
-void LinkedDeque::removeFront(){
+template <typename T>
+void LinkedDeque<T>::removeFront(){
     if(empty()) throw std::runtime_error("deque empty");
     D.removeFront();
     n--; 
 }
 
-void LinkedDeque::removeBack(){
+template <typename T>
+void LinkedDeque<T>::removeBack(){
     if(empty()) throw std::runtime_error("deque empty");
     D.removeBack();
     n--;
